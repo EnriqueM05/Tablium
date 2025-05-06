@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Calculadora de Tablas de Verdad</title>
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="calculator">
+      <h2>Calculadora de Tablas de Verdad</h2>
+      <h3>Enrique Milo, Camila Briseño, Jorge, Sofía</h3>
+      <div class="input-area">
+        <input
+          type="text"
+          id="expresion"
+          placeholder="Escribe tu expresión..."
+        />
+        <button onclick="borrarExpresion()">⌫</button>
+      </div>
+      <div class="buttons">
+        <button
+          title="conjunción"
+          onclick="agregar('∧')"
+        >
+          ∧
+        </button>
+        <button
+          title="disyunción"
+          onclick="agregar('∨')"
+        >
+          ∨
+        </button>
+        <button
+          title="negacion"
+          onclick="agregar('~')"
+        >
+          ~
+        </button>
+        <button
+          title="implicacion"
+          onclick="agregar('→')"
+        >
+          →
+        </button>
+        <button
+          title="bicondicional"
+          onclick="agregar('↔')"
+        >
+          ↔
+        </button>
+        <button
+          title="xor"
+          onclick="agregar('⊕')"
+        >
+          ⊕
+        </button>
+        <button
+          title=""
+          onclick="agregar('(')"
+        >
+          (
+        </button>
+        <button
+          title=""
+          onclick="agregar(')')"
+        >
+          )
+        </button>
+      </div>
+      <div class="variables">
+        <button onclick="agregar('p')">p</button>
+        <button onclick="agregar('q')">q</button>
+        <button onclick="agregar('r')">r</button>
+        <button onclick="agregar('s')">s</button>
+        <button onclick="agregar('t')">t</button>
+      </div>
+      <button
+        class="generate"
+        onclick="generarTabla()"
+      >
+        Generar Tabla
+      </button>
+      <div
+        id="resultado"
+        class="result-area"
+      ></div>
+    </div>
+
+    <script src="./script/app.js"></script>
+  </body>
+</html>
