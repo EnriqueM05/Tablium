@@ -1,2 +1,31 @@
-main.py
+# Node
+node_modules/
 dist/
+build/
+build-assets/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Optional: ignore VS Code config
+.vscode/
+
+# Optional: OS junk
+Thumbs.db
+
