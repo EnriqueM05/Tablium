@@ -1,12 +1,54 @@
 {
   "name": "proyectologica",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "electron": "^36.1.0"
+  },
+  "build": {
+    "appId": "com.yourcompany.yourapp",
+    "productName": "Tablium",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "build-assets/AppIcon.icns",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "dmg": {
+      "background": "build-assets/background.jpg",
+      "icon": "build-assets/AppIcon.icns",
+      "iconSize": 100,
+      "artifactName": "TabliumInstaller.dmg",
+      "window": {
+        "width": 835,
+        "height": 600 
+      },
+      "contents": [
+    {
+      "x": 300,
+      "y":250 
+    },
+    {
+      "x": 535,
+      "y": 250,
+      "type": "link",
+      "path": "/Applications"
+    }
+  ]
+    }
+  }
 }

@@ -194,6 +194,22 @@ function generarTabla() {
   }
 }
 
+// Function to toggle the theme between light and dark
+function toggleTheme() {
+  const body = document.body;
+  const themeButton = document.querySelector(".theme-button");
+
+  // Toggle the dark-theme class on the body
+  body.classList.toggle("dark-theme");
+
+  // Update the button text or icon based on the current theme
+  if (body.classList.contains("dark-theme")) {
+    themeButton.textContent = "🌙"; // Dark mode icon
+  } else {
+    themeButton.textContent = "☀️"; // Light mode icon
+  }
+}
+
 // Add keyboard event listener for Enter key
 document.addEventListener("DOMContentLoaded", function () {
   const inputField = document.getElementById("expresion");
@@ -203,4 +219,15 @@ document.addEventListener("DOMContentLoaded", function () {
       generarTabla();
     }
   });
+});
+
+// Ensure the theme button is initialized with an icon and event listener
+document.addEventListener("DOMContentLoaded", () => {
+  const themeButton = document.querySelector(".theme-button");
+
+  // Set the initial icon for the theme button
+  themeButton.textContent = "☀️"; // Default to light mode icon
+
+  // Add the click event listener to toggle the theme
+  themeButton.addEventListener("click", toggleTheme);
 });

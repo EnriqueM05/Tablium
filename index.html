@@ -27,15 +27,21 @@
   </head>
   <body>
     <div class="calculator">
+      <button class="theme-button"></button>
       <h2>Calculadora de Tablas de Verdad</h2>
-      <h3>Enrique Milo, Camila Briseño, Jorge, Sofía</h3>
+      <h3>Enrique Milo, Camila Briseño, Jorge Delgadillo, Sofía Camacho</h3>
       <div class="input-area">
         <input
           type="text"
           id="expresion"
           placeholder="Escribe tu expresión..."
         />
-        <button onclick="borrarExpresion()">⌫</button>
+        <button
+          id="deleteBtn"
+          onclick="borrarExpresion()"
+        >
+          ⌫
+        </button>
       </div>
       <div class="buttons">
         <button
